@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MegaCool Radio</title>
+    <title>MegaCool Rádió</title>
     <style>
         * {
             margin: 0;
@@ -41,8 +41,23 @@
         .title {
             color: #2c3e50;
             font-size: 1.4em;
-            margin-bottom: 25px;
+            margin-bottom: 5px;
             font-weight: 600;
+        }
+        
+        .website-link {
+            margin-bottom: 25px;
+        }
+        
+        .website-link a {
+            color: #7f8c8d;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .website-link a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
         }
         
         .play-btn {
@@ -124,7 +139,10 @@
 <body>
     <div class="player">
         <div class="logo">🎵</div>
-        <div class="title">MegaCool Radio</div>
+        <div class="title">MegaCool Rádió</div>
+        <div class="website-link">
+            <a href="https://www.megacoolradio.hu" target="_blank">www.megacoolradio.hu</a>
+        </div>
         
         <button class="play-btn" onclick="togglePlay()">▶️ Lejátszás</button>
         
@@ -198,7 +216,7 @@
                 const artist = data.icestats.source[1].artist;
                 document.getElementById('metadata').textContent = `${artist} - ${title}`;
             } catch(error) {
-                document.getElementById('metadata').textContent = 'MegaCool Radio - Élő adás';
+                document.getElementById('metadata').textContent = 'MegaCool Rádió - Élő adás';
             }
         }
 
