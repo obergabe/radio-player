@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MegaCool Rádió</title>
+    <title>MegaCool Radio</title>
     <style>
         * {
             margin: 0;
@@ -117,6 +117,16 @@
             color: #7f8c8d;
             font-size: 0.9em;
             margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .copyright {
+            color: #95a5a6;
+            font-size: 0.8em;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ecf0f1;
+            line-height: 1.4;
         }
         
         @media (max-width: 480px) {
@@ -133,13 +143,19 @@
                 padding: 12px 30px;
                 font-size: 1em;
             }
+            
+            .copyright {
+                font-size: 0.75em;
+                margin-top: 15px;
+                padding-top: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="player">
         <div class="logo">🎵</div>
-        <div class="title">MegaCool Rádió</div>
+        <div class="title">MegaCool Radio</div>
         <div class="website-link">
             <a href="https://www.megacoolradio.hu" target="_blank">www.megacoolradio.hu</a>
         </div>
@@ -152,6 +168,10 @@
         
         <div class="metadata" id="metadata">Előkészítés...</div>
         <div class="status" id="status">Kész</div>
+        
+        <div class="copyright">
+            © 2025 MegaCool Rádió - Minden jog fenntartva
+        </div>
     </div>
 
     <script>
@@ -216,7 +236,7 @@
                 const artist = data.icestats.source[1].artist;
                 document.getElementById('metadata').textContent = `${artist} - ${title}`;
             } catch(error) {
-                document.getElementById('metadata').textContent = 'MegaCool Rádió - Élő adás';
+                document.getElementById('metadata').textContent = 'MegaCool Radio - Élő adás';
             }
         }
 
